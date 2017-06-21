@@ -15,11 +15,20 @@ var IndexRoute = router.IndexRoute;
 //high-level components
 
 var Main = require('../components/Main');
+var Search = require("../components/children/Search");
+var Results = require("../components/children/Results");
+var Saved = require("../components/children/Saved");
+
 
 module.exports = (
 
 	<Router history={hashHistory}>
-		<Route path="/" component={Main}>
+		<Route path='/' component={Main}>
+
+		<Route path='Search' component = {Search} />
+
+		<IndexRoute component={Main} />		
+
 		</Route>
 	</Router>
 

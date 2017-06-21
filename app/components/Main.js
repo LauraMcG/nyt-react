@@ -3,29 +3,27 @@ var React = require("react");
 // Including the Link component from React Router to navigate within our application without full page reloads
 var Link = require("react-router").Link;
 
+var Search = require('./children/Search');
+
 var Main = React.createClass({
 
   // Here we render the function
   render: function() {
 
     return ( 
+        <div className="container">
 
-      <div className="container">
-        <div className="jumbotron">
-          <h2><strong>It works!</strong></h2>
-          <p><em>Router connected!</em></p>
-          <hr />
-          <p>
-          </p>
-        </div>
+        {/*jumbotron */}
+          <div className="jumbotron">
+            <h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+          </div>
 
-        <div className="row">
-
-          
+          <div className="row">
+            <Search />
+          </div>
 
         </div>
 
-      </div>
 
     );
   }
