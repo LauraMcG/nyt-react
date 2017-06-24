@@ -12,7 +12,7 @@ var Search = React.createClass({
   getInitialState: function() {
     return {
       searchTerm: "",
-      searchResults: {}
+      searchResults: []
     };
   },
 

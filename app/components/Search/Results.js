@@ -10,15 +10,12 @@ var Results = React.createClass({
 
   //creating a function to list the result objects
 
-  renderResults: function(data) {
-    return (
-      <div className="responses">
-              <p>test</p>
-              {this.searchResults.docs[0].headline.main}                               
-          </div>
-          )
+  // renderResults: function(data) {
+  //   return (
 
-  },
+
+
+  // },
 
   render: function() {
     return (
@@ -29,7 +26,14 @@ var Results = React.createClass({
               <h3 className="panel-title">Results</h3>
             </div>
             <div className="panel-body">
-              <p>{this.props.renderResults}</p>
+              <p>
+              {/* get back to this */}
+                {this.props.searchResults ? this.props.searchResults.map(function(article, i) {
+                  return(
+                    <p key={i}>{article.headline.main}</p>
+                  )
+                }) : <p>Loading...</p>}
+              </p>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ var helpers = {
 
 		return axios.get(queryURL).then(function(results){
 
-			console.log(results.data.response);
+			console.log(results.data.response.docs);
 			
 			// parsedResponse = JSON.parse(response);
 			// return parsedResponse;
@@ -18,7 +18,7 @@ var helpers = {
 			// console.log(response.data.response.docs[0].headline.main)
 			//formatted send the results back in a react-friendly way maybe?
 			
-			return results.data.response;
+			return results.data.response.docs;
 
 		});
 	}
