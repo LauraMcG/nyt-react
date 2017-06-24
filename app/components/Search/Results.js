@@ -2,6 +2,24 @@
 var React = require("react");
 
 var Results = React.createClass({
+
+  getInitialState: function() {
+    return { searchResults: {}
+    };
+  },
+
+  //creating a function to list the result objects
+
+  renderResults: function(data) {
+    return (
+      <div className="responses">
+              <p>test</p>
+              {this.searchResults.docs[0].headline.main}                               
+          </div>
+          )
+
+  },
+
   render: function() {
     return (
       <div className="container">
@@ -11,7 +29,7 @@ var Results = React.createClass({
               <h3 className="panel-title">Results</h3>
             </div>
             <div className="panel-body">
-              <p>{this.props.searchResults}</p>
+              <p>{this.props.renderResults}</p>
             </div>
           </div>
         </div>

@@ -1,12 +1,16 @@
 // Include React
 var React = require("react");
 
+
 //sets the search term to a generic state
-var Search = React.createClass({
+var Query = React.createClass({
 
   //set the initial state
   getInitialState: function() {
-    return { searchTerm: "" };
+    return {
+      searchTerm: "",
+      searchResults: {}
+    };
   },
 
   //this handles the change in the search term
@@ -22,7 +26,6 @@ var Search = React.createClass({
     //don't let the form submit itself.
     event.preventDefault();
 
-//!!! create this function in the main file.
     //give the search term to main
     this.props.setSearch(this.state.searchTerm);
     //resets the input upon submit
@@ -55,4 +58,4 @@ var Search = React.createClass({
   }
 });
 
-module.exports = Search;
+module.exports = Query;
